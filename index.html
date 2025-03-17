@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steven Godfrey's Portfolio</title>
-    <!-- import the tailwindc css script -->
+    <title>Steven's Portfolio</title>
+    <!-- import tailwind cdn from tailwindcss website -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body class="bg-slate-900">
 
@@ -16,35 +16,17 @@
             <a href="#" class="text-sky-500 text-3xl font-bold border-2 border-sky-500 px-2 py-1 z-10">Steven Godfrey</a>
             <!-- Desktop menu navigation -->
             <ul class="md:flex space-x-10 hidden">
-                <li><a href="#home" class="text-sky-500">Home</a></li>
-                <li><a href="#about" class="text-white hover:text-sky-500">About</a></li>
-                <li><a href="#projects" class="text-white hover:text-sky-500">Projects</a></li>
-                <!-- <li><a href="#blogs" class="text-white hover:text-sky-500">Blogs</a></li> -->
-                <li><a href="#contact" class="text-white hover:text-sky-500">Contact</a></li>
+                <li><a href="#home" class="text-sky-500 hover:text-white ease-in duration-300">Home</a></li>
+                <li><a href="#about" class="text-white hover:text-sky-500 ease-in duration-300">About</a></li>
+                <li><a href="#projects" class="text-white hover:text-sky-500 ease-in duration-300">Projects</a></li>
+                <!-- <li><a href="#blogs" class="text-white hover:text-sky-500 ease-in duration-300">Blogs</a></li> -->
+                <li><a href="#contact" class="text-white hover:text-sky-500 ease-in duration-300">Contact</a></li>
             </ul>
             <!-- Mobile menu navigation -->
              <a href="#" id="menu" class="text-white text-2x1 md:hidden">
                 <i class="fa-solid fa-bars"></i>
              </a>
         </nav>
-        <!-- hero section home -->
-        <section class="flex md:flex flex-col justify-between">
-            <div class="pt-16 md:pt-32">
-                <span class="text-white text-2xl">Hello, I'm</span>
-                <h1 class="text-sky-500 text-6xl md:text-7xl font-bold font-serif mt-2 mb-6">Steven Godfrey Fernandez</h1>
-                <h2 class="text-sky-400 text-xl md:text-2xl font-bold my-2 capitalize">Student / 2-Year Information Technology</h2>
-                <p class="text-gray-400 max-w-xl mt-6 mb-16">
-                    I'm currently a student at STI Alaminos, I'm graduating in 2025 as Information Technology.
-                    I'm a videograper, photographer, and video content creator.
-                </p>
-            </div>
-            <div class="space-x-5">
-                <button class="bg-sky-700 text-white py-2 px-4 my-4 rounded-full border-2 border-sky-700 hover:bg-sky-500 ease-in duration-300" onclick="window.open('resources/files/resume.pdf')">Download CV <i class="fa-solid fa-download"></i></button>
-                <button class=" text-white py-2 px-4 my-4 rounded-full border-2 border-sky-700 hover:bg-sky-400 ease-in duration-300" onclick="location.href='#contact'">Contact us <i class="fa-solid fa-message"></i></button>
-            </div>
-            <img src="../Steven Godfrey/res/images/my-pic.png" class="w-full md:w-1/2 mt-16=10 md:mt-0">
-         </section>
-    </div>
         <ul id="list" class="flex flex-col justify-center items-center space-y-10 md:hidden bg-sky-500 absolute top-0 bottom-0 left-0 w-60 transform -translate-x-full transition ease-in-out duration-300">
             <li><i class="fa-solid fa-house"></i><a href="#home" class="text-slate-900"> Home</a></li>
             <li><i class="fa-solid fa-user"></i><a href="#about" class="text-white hover:text-slate-900">About</a></li>
@@ -52,10 +34,40 @@
             <!-- <li><i class="fa-solid fa-blog"></i> <a href="#blogs" class="text-white hover:text-slate-900">Blogs</a></li> -->
             <li><i class="fa-solid fa-address-book"></i> <a href="#contact" class="text-white hover:text-slate-900">Contact</a></li>
         </ul>
+        <!-- create section named home -->
+        <section class="flex md:flex flex-col justify-between">
+            <div class="pt-16 md:pt-32">
+                <span class="text-white text-2xl">Hello, I'm</span>
+                <h1 class="text-sky-500 text-6xl md:text-5xl font-bold font-serif mt-2 mb-6">Steven Godfrey Fernandez</h1>
+                <h2 class="text-sky-400 text-xl md:text-2xl font-bold my-2 capitalize">Student / 2-Year Information Technology</h2>
+                <p class="text-gray-400 max-w-xl mt-6 mb-16">
+                    I'm currently student at STI Alaminos as Information Technology, I have experience in Programming like Java, C# and Web Development.
+                    I'm content creator on Youtube, Facebook and Tiktok. Also I'm Photographer and Tiktokerist.
+                </p>
+            </div>
+            <div class="space-x-5">
+                <button class="bg-sky-700 text-white py-2 px-4 my-4 rounded-full border-2 border-sky-700 hover:bg-sky-500 ease-in duration-300" onclick="window.open('resources/files/resume.pdf')"><i class="fa-solid fa-download"></i> Download CV</button>
+                <button class=" text-white py-2 px-4 my-4 rounded-full border-2 border-sky-700 hover:bg-sky-400 ease-in duration-300" onclick="location.href='#contact'"><i class="fa-solid fa-message"></i> Contact us</button>
+            </div>
+            <!-- <img src="../Steven Godfrey/res/images/my-pic.png" class="w-full md:w-1/2 mt-16=10 md:mt-0"> -->
 
-    
-    <!-- <footer class="text-white text-center pt-40">
-        <p class="text-sm">Copyright &copy; 2025 Steven Godfrey Fernandez</p>
+            <div class="flex justify-items-start space-x-5 mt-10">
+                <img src="resources/images/fb.png" alt="fb" class="w-20 h-20 hover:scale-110 ease-in duration-300" onclick="location.href='https://www.facebook.com/Fernandezstevengod'">
+                <img src="resources/images/tiktok.png" alt="tiktok" class="w-24 h-24 hover:scale-110 ease-in duration-300" onclick="location.href='https://www.tiktok.com/@fernandstevengod'">
+                <img src="resources/images/github.png" alt="github" class="w-20 h-20 hover:scale-110 ease-in duration-300" onclick="location.href='https://github.com/fernandezsteven'">
+                <img src="resources/images/ig.png" alt="ig" class="w-20 h-20 hover:scale-110 ease-in duration-300" onclick="location.href='https://www.instagram.com/bhabystevengodfernandez/'">
+                <img src="resources/images/yt.png" alt="youtube" class="w-20 h-20 hover:scale-110 ease-in duration-300" onclick="location.href='https://www.youtube.com/@fernandezstevengodfrey19'">
+            </div>
+         </section>
+        </div>         
+        <!-- create a another action named about -->
+    <section id="about" class="bg-slate-800 flex md:flex flex-col justify-between">
+        
+    </section>
+    <!-- <footer>
+        <div class="bg-stone-800 text-white text-center py-5">
+            <p class="text-white font-bold">Copyright &copy; 2025 Steven Godfrey, All rights reserved</p>
+        </div>
     </footer> -->
 </body>
 <script src="resources/css-js/script.js"></script>
