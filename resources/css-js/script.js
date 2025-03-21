@@ -7,3 +7,7 @@ menu.addEventListener('click', () => {
     bars.classList.toggle('fa-xmark');
 });
 
+// create a function to download the resume via window open
+document.getElementById("download").onclick = function() {
+    window.open("resources/files/resume.pdf");
+}
