@@ -12,10 +12,9 @@ window.onscroll = () => {
         let id = sec.getAttribute('id');
 
         if (top >= offset && top < offset + height) {
-            // active navbar links 
-            navLinks.forEach(links => {
+            navLinks.forEach (links => {
                 links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id +']').classList.add('active');
+                document.querySelector('header nav a[href*=['+ id +']').classList.add('active');
             });
         }
     });
