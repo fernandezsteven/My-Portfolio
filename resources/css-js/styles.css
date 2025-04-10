@@ -92,6 +92,7 @@ section {
 
 .home-content {
     max-width: 60rem;
+    z-index: 99;
 }
 
 .home-content h1 {
@@ -112,8 +113,27 @@ section {
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke: .7px var(--main-color);
+    background-image: linear-gradient(var(--main-color), var(--main-color));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
+    
 }
 
+.home-content .text-animated h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid var(--main-color);
+    z-index: -1;
+    animation: homeCursorText 6s linear infinite;
+    animation-delay: 3s;
+}
 .home-content p {
     font-size: 2rem;
     margin: 2rem 0 4rem;
@@ -290,6 +310,7 @@ span {
     border-bottom: .2rem solid var(--second-bg-color);
     border-left: .2rem solid var(--main-color);
     border-right: .2rem solid var(--main-color);
+    animation: aboutSpinner 8s linear infinite;
 }
 .about-content {
     text-align: center;
@@ -466,15 +487,15 @@ span {
 }
 
 .skills-content .progress:nth-child(2) .bar span {
-    width: 80%;
+    width: 90%;
 }
 
 .skills-content .progress:nth-child(3) .bar span {
-    width: 65%;
+    width: 75%;
 }
 
 .skills-content .progress:nth-child(4) .bar span {
-    width: 60%;
+    width: 70%;
 }
 
 .skills-content .progress:nth-child(5) .bar span {
@@ -482,11 +503,19 @@ span {
 }
 
 .skills-content .progress:nth-child(6) .bar span {
+    width: 60%;
+}
+
+.skills-content .progress:nth-child(7) .bar span {
     width: 50%;
 }
 
 /* style for projects */
-
+.projects {
+    min-width: auto;
+    padding-bottom: 7rem;
+    background: var(--bg-color);
+}
 /* style for blogs */
 
 /* style for contact */
@@ -617,3 +646,36 @@ span {
 .footer-iconsTop a:hover i {
     color: var(--main-color);
 }
+
+/* responsive design is another file named responsive-css in the resources folder */
+
+/* KEYFRAMES */
+
+@keyframes homeBgText {
+    0%, 10%, 100% {
+        background-position: -100rem 0;
+    }
+    65%, 85% {
+        background-position: 0 0;
+    }
+}
+@keyframes homeCursorText {
+    0%, 10%, 100% {
+        width: 0;
+    }
+    65%, 78%, 85% {
+        width: 100%;
+        opacity: 1;
+    }
+    75%, 81% {
+        opacity: 0;
+    }
+}
+
+/* Animations related to the home page */
+@keyframes aboutSpinner {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+/* end of styles */

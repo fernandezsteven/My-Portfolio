@@ -39,4 +39,7 @@ window.addEventListener('scroll', () => {
     if (header) {
         header.classList.toggle('sticky', window.scrollY > 100);
     }
+
+    menu.classList.remove('bx-x'); // toggle the 'bx-x' class on the menu icon
+    navbar.classList.remove('active'); // toggle the 'active' class on the navbar
 });
