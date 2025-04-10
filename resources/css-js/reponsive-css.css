@@ -1,10 +1,9 @@
 /* create variables for the website */
 :root {
-    --bg-color: #292e38;
+    --bg-color: #1b1d20;
     --second-bg-color: #112e42;
     --text-color: #fff;
     --main-color: #0ef;
-    --second-color: rgb(46, 44, 85);
 }
 
 /*  */
@@ -39,18 +38,51 @@
     #menu-icon {
         display: block;
     }
-    
+
     .navbar {
         position: absolute;
-        top: 0;
+        top: 100%;
+        left: -100%;
         width: 100%;
         padding: 1rem 4%;
-        background: var(--bg-color);
+        background: var(--main-color);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        transition: .25s ease;
+        transition-delay: .25s;
+    }
+    .navbar.active {
+        left: 0;
+        transition-delay: 0s;
+    }
+    
+    .navbar .active-nav {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,0.2);
+        z-index: -1;
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+    
+    .navbar.active .active-nav {
+        left: 0;
+        transition-delay: .25s;
     }
     .navbar a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
+        transform: translateX(-20rem);
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+    .navbar.active a {
+        transform: translateX(0);
+        transition-delay: .25s;
     }
 }
