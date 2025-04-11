@@ -1,9 +1,10 @@
 /* create variables for the website */
 :root {
-    --bg-color: #1b1d20;
+    --bg-color: #292e38;
     --second-bg-color: #112e42;
     --text-color: #fff;
     --main-color: #0ef;
+    --second-color: rgb(46, 44, 85);
 }
 
 /*  */
