@@ -1,9 +1,9 @@
 /* create a scc respomnsive */
 
 @media only screen and (max-width: 600px) {
-    /* #header {
-        background-image: url(/fernandezstevengodfrey/resources/images/phone-background.png); 
-    } */
+    #header {
+        background-image: none 
+    }
  
     .header-text {
         margin-top: 90%;
