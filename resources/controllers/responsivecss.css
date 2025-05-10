@@ -51,8 +51,6 @@
         margin: 25px;
     }
     
-    
- 
     .sub-title {
         font-size: 40px;
     }
@@ -74,6 +72,10 @@
         margin-right: 20px;
     }
  
+    .layer {
+         font-size: 12px;
+    }
+    
     .contact-left, .contact-right {
         flex-basis: 100%;
     }
