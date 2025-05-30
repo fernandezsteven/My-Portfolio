@@ -64,8 +64,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 20px;
     position: relative;
-}
-   
+}   
 nav ul li a::after {
     content: '';
     width: 0;
@@ -97,7 +96,7 @@ nav ul li a::after {
 
 /* social media icons */
 .social-media {
-    margin-top: 15%;
+    margin-top: 10%;
     display: flex;
 }
 
@@ -336,6 +335,11 @@ nav ul li a::after {
     background: #ff004f;
 }
 
+/* create for the blog section */
+
+#blogs {
+    padding: 50px 0;
+}
 /* create for the contact section */
 
 .contact-left {
