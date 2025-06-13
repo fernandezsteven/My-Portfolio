@@ -1,200 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steven Godfrey Fernandez | Portfolio</title>
-    <!-- import local css file from resources file -->
-    <link rel="stylesheet" href="./resources/controllers/designs.css">
-    <link rel="stylesheet" href="./resources/controllers/responsivecss.css">
-    <!-- import icons from boxicons website -->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <!-- import fonts from google fonts website -->
+    <!-- import the local css file from the resources file called styles.css -->
+    <link rel="stylesheet" href="./Resources/Controllers/Styles.css">
+    <!-- import the local css file from the resources file called keyframescss.css -->
+    <link rel="stylesheet" href="./Resources/Controllers/Keyframescss.css">
+    <!-- import the local css file from the resources file called responsivecss.css -->
+    <link rel="stylesheet" href="./Resources/Controllers/Responsivecss.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- import the fonts from google fonts website -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- import the icons from boxicons website v2, the v3 of boxicons is released, visit the https://boxicons.com/ for more info -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <a href="#" class="logo"><span class="text-primary">S</span>teven Godfrey.</a>
-                <ul id="sidemenu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <!-- <li><a href="#blogs">Blogs</a></li> -->
-                    <li><a href="#contact">Contact</a></li>
-                    <i id="close-icon" class='bx bx-x' onclick="closemenu()"></i>
-                </ul>
-                <i id="menu-icon" class='bx bx-menu' onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>Feature IT Support</p>
-                <h1>Hi, I'm <span>Steven Godfrey </span><br> Fernandez from Alaminos City, Philippines</h1>
-            </div>
-            <div class="social-media">
-                <a href="https://www.facebook.com/Fernandezstevengod"><i class='bx bxl-facebook'></i></a>
-                <a href="https://www.tiktok.com/@fernandstevengod"><i class='bx bxl-tiktok'></i></a>
-                <a href="https://github.com/fernandezsteven"><i class='bx bxl-github'></i></a>
-                <a href="https://www.instagram.com/bhabystevengodfernandez/"><i class='bx bxl-instagram'></i></a>
-                <a href="https://www.youtube.com/@fernandezstevengodfrey19"><i class='bx bxl-youtube'></i></a>
-                <a href="https://www.linkedin.com/in/fernandstevengod/"><i class='bx bxl-linkedin'></i></a>
-            </div>
-        </div>
-    </div>
-<!-- ----------------- create a about section for the website ----------------- -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="./resources/Images/about-img.png">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>
-                        I'm Steven Godfrey Fernandez, I'm a Student from STI Alaminos as Information Technology. 
-                        I have experience in Programming like Java, C#, Python and Web Development. I'm also Photographer and Videographer.
-                    </p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Java</span><br>Programming</li>
-                            <li><span>Python</span><br>Programming</li>
-                            <li><span>C#</span><br>Programming</li>
-                            <li><span>HTML</span><br>Web Development</li>
-                            <li><span>CSS</span><br>Web Development</li>
-                            <li><span>JavaScript</span><br>Web Development</li>
-                            <li><span>Android Studio</span><br>Mobile Development</span></li>
-                            <li><span>Canva Editor</span><br>Graphic Design</span></li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2023 - Present</span><br>Information Technology from STI Alaminos</li>
-                            <li><span>2021 - 2023</span><br>TVL – Home Economics, FBS & BPP, and Cookery from Alos National High School</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <header class="active">
+        <a href="index.html" class="logo">Steven Godfrey.</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="bars-box active">
+        <div class="bar" style="--i:6;"></div>
+        <div class="bar" style="--i:5;"></div>
+        <div class="bar" style="--i:4;"></div>
+        <div class="bar" style="--i:3;"></div>
+        <div class="bar" style="--i:2;"></div>
+        <div class="bar" style="--i:1;"></div>
     </div>
 
-    <!-- ----------------- create a services section for the website ----------------- -->
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
+    <section class="home active">
+        <div class="home-detail">
+            <h1>Steven Godfrey Fernandez</h1>
+            <h2>I'm a
+                <span style="--i:4;" data-text="Student">Student</span>
+                <span style="--i:3;" data-text="Digital Design">Digital Design</span>
+                <span style="--i:2;" data-text="IT Specialist">IT Specialist</span>
+                <span style="--i:1;" data-text="Programmer">Programmer</span>
+            </h2>
+            <p>Hi, I'm Steven Godfrey, I'm IT Specialist and Programmer.</p>
+            <div class="btn-sci">
+                <a href="#" download class="btn">Download CV</a>
+                <div class="sci">
+                    <a href="https://www.facebook.com/Fernandezstevengod"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/bhabystevengodfernandez"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.tiktok.com/@fernandstevengod"><i class='bx bxl-tiktok'></i></a>
+                    <a href="https://www.youtube.com/@fernandezstevengodfrey19"><i class='bx bxl-youtube'></i></a>
+                    <a href="https://www.linkedin.com/in/fernandstevengod"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.github.com/fernandezsteven"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="./Resources/Images/about-img.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="about-container">
+            <div class="about-box">
+                <h2>My <span>Background</span></h2>
+                <p class="desc">I'm Steven Godfrey Fernandez, I'm a Student from STI Alaminos as Information Technology.
+                    I have experience in Programming like Java, C#, Python and Web Development. I'm also Photographer
+                    and Videographer.</p>
+
+                <button class="about-btn active">Education</button>
+                <button class="about-btn">Skils</button>
+                <button class="about-btn">Awards</button>
+                <button class="about-btn">Information</button>
+            </div>
+
+            <div class="about-box">
+                <div class="about-detail education active">
+                    <h2 class="heading">My <span>Education</span></h2>
+                    <p class="desc">This the information in past education over the years.</p>
+                    <div class="about-list">
+                        <div class="about-item">
+                            <p class="year"> 2023 - Present</p>
+                            <h3>2-Year Information Technology</h3>
+                            <p class="course">STI Alaminos</p>
+                        </div>
+                        <div class="about-item">
+                            <p class="year">2021 - 2023</p>
+                            <h3>TVL – Home Economics, FBS & BPP, and Cookery</h3>
+                            <p class="course">Alos National High School - DepEd</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-detail skills">
+                    <h2 class="heading">My <span>Skils</span></h2>
+                    <p class="desc">This the my skills about learning the Programming language</p>
+                    <div class="about-list">
+                        <div class="about-item">
+                            <i class='bx bxl-java'></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="about-item">
+                            <i class='bx bxl-python'></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="about-item">
+                            <i class='bx bxl-html5'></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="about-item">
+                            <i class='bx bxl-css3'></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="about-item">
+                            <i class='bx bxl-javascript'></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="about-item">
+                            <i class='bx  bxs-data'></i>
+                            <span>SQL Server</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-detail awards">
+                    <h2 class="heading">My <span>Awards</span></h2>
+                    <p>This the information in past awards over the years.</p>
+                    <div class="about-list">
+                        <div class="about-item">
+                            <p class="year"><i class='bx bx-calendar' style="font-size: 1.6rem;"></i> June 19, 2024</p>
+                            <h3>Certificate of Course Completion in Java Fundamentals</h3>
+                            <p class="course">Oracle Academy and STI Services Group Inc.</p>
+                        </div>
+                        <div class="about-item">
+                            <p class="year"><i class='bx bx-calendar' style="font-size: 1.6rem;"></i> June 16, 2023</p>
+                            <h3>Certificate of Completion in Cookery NCII</h3>
+                            <p class="course">TESDA - Pangasinan Technological Institute</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-detail information">
+                    <h2 class="heading">About <span>Information</span></h2>
+                    <p class="desc">This is the information about me.</p>
+                    <div class="about-list">
+                        <div class="about-item">
+                            <p>Name: <span>Steven Godfrey Humilde Fernandez</span></p>
+                        </div>
+                        <div class="about-item">
+                            <p>Gender: <span>Male</p>
+                        </div>
+                        <div class="about-item">
+                            <p>Age: <span>21 Years Old</p>
+                        </div>
+                        <div class="about-item">
+                            <p>Status: <span>Single</p>
+                        </div>
+                        <div class="about-item">
+                            <p>Address: <span>Quibuar, Alaminos City</span></p>
+                        </div>
+                        <div class="about-item">
+                            <p>Nationality: <span>Filipino</p>
+                        </div>
+                        <div class="about-item">
+                            <p>Phone: <span>(+63) 9915990193/(+63) 9272371313</p>
+                        </div>
+                        <div class="about-item">
+                            <p>Email: <span>fernandstevengod@gmail.com</p>
+                        </div>
+                        <div class="about-item">
+                            <p>Language: <span>Filipino, English</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2 class="heading">My <span>Services</span></h2>
+        <div class="services-container">
+            <div class="services-box">
+                <div class="icon">
                     <i class='bx bx-code-alt'></i>
-                    <h2>Programming</h2>
-                    <p>
-                        I have experience in Programming like Java, C#, Python and Web Development like HTML, CSS and JS.
-                    </p>
-                    <a href="#projects" class="read">Learn more</a>
+                    <a href="#"><i class='bx bx-arrow-back'></i></a>
                 </div>
-                <div>
-                    <i class='bx bxs-camera-movie'></i>
-                    <h2>Photo/Video Editing</h2>
-                    <p>
-                        I have experience an in Photo/Video Editing like Canva Editor and Capcut Editor.
-                    </p>
-                    <a href="#projects" class="read">Learn more</a>
+                <h3>Programming</h3>
+                <p>I have experience in Programming like Java, C#, Python and Web Development like HTML, CSS and JS.</p>
+            </div>
+
+            <div class="services-box">
+                <div class="icon">
+                    <i class='bx bx-camera'></i>
+                    <a href="#"><i class='bx bx-arrow-back'></i></a>
                 </div>
-                <div>
-                    <i class='bx bx-laptop'></i>
-                    <h2>Installation</h2>
-                    <p>
-                        I have experience in installation of Operating System like, Windows, Linux and MacOS,
-                        and Software like Visual Studio, Android Studio and Applications.
-                    </p>
-                    <a href="#projects" class="read">Learn more</a>
+                <h3>Digital Photographer/Videographer</h3>
+                <p>I have experience of Digital Editor in Canva and Adobe Photoshop. also Digital
+                    Photographer/Videographer.</p>
+            </div>
+
+            <div class="services-box">
+                <div class="icon">
+                    <i class='bx bx-server'></i>
+                    <a href="#"><i class='bx bx-arrow-back'></i></a>
                 </div>
+                <h3>Services Installation</h3>
+                <p>I have experience in installation of Operating System like, Windows, Linux and MacOS, and Software
+                    like Visual Studio, Android Studio and Applications.</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- ----------------- create a projects section for the website ----------------- -->
-    <div id="projects">
-        <div class="container">
-            <h2 class="sub-title">My Projects</h2>
-            <div class="project-recent">
-                <div class="project">
-                    <img src="./resources/Images/1.jpeg">
-                    <div class="layer">
-                        <h3>Development and Implementation of the Comprehensive Patient Health Records Management System for Anda RHU</h3>
-                        <p>
-                            C#, Microsoft Visual Studio, Microsoft SQL Server, .Net Framework MAUI
-                        </p>
-                        <a href="#"><i class="bx bx-link-external"></i></a>
+    <section class="projects">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="projects-container">
+            <div class="projects-box">
+                <div class="projects-detail active">
+                    <p class="numb">01</p>
+                    <h3>ANDA-CARE HEALTH RHU</h3>
+                    <p>This project of Development and Implementation of the Comprehensive Patient Health Records
+                        Management System for Anda RHU, prepared by: Resh Jachin Gemino, Roman Gero Arroyo, Steven
+                        Godfrey Fernandez, Charls John Nipaz, Shadrach Pansoy
+                    </p>
+                    <div class="tech">
+                        <p>C#, Microsoft Visual Studio, Microsoft SQL Server, .Net Framework MAUI</p>
+                    </div>
+                    <div class="live-site">
+                        <a href="#"><i class='bx bx-arrow-back'></i><span>Live Site</span></a>
+                        <a href="#"><i class='bx bxl-github'></i><span>Github Repository</span></a>
                     </div>
                 </div>
-                <div class="project">
-                    <img src="./resources/Images/2.png">
-                    <div class="layer">
-                        <h3>Content Creator on Youtube</h3>
-                        <!-- <p>
-                        </p> -->
-                        <a href="https://www.youtube.com/@fernandezstevengodfrey19"><i class="bx bx-link-external"></i></a>
+
+                <div class="projects-detail">
+                    <p class="numb">02</p>
+                    <h3>PopSIKO</h3>
+                    <p>The project of PopSIKO - The Modified version of Matching Game is prepared by: Steven Godfrey
+                        Fernandez, Vicente Mariveles Jr.</p>
+                    <div class="tech">
+                        <p>Java, Android Studio, XML, Firebase by Google</p>
+                    </div>
+                    <div class="live-site">
+                        <a href="#"><i class='bx bx-arrow-back'></i><span>Live Site</span></a>
+                        <a href="#"><i class='bx bxl-github'></i><span>Github Repository</span></a>
+                    </div>
+                </div>
+
+                <div class="projects-detail">
+                    <p class="numb">03</p>
+                    <h3></h3>
+                    <p></p>
+                    <div class="tech">
+
+                    </div>
+                    <div class="live-site">
+                        <a href="#"><i class='bx bx-arrow-back'></i><span>Live Site</span></a>
+                        <a href="#"><i class='bx bxl-github'></i><span>Github Repository</span></a>
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See more</a>
-        </div>
-    </div>
-    <!-- ----------------- create a blogs section for the website ----------------- -->
-    <div id="blogs">
-        <div class="container">
-            <h2 class="sub-title">My Posts</h2>
-            <div>
 
-            </div>
-        </div>
-    </div>
-    <!-- ----------------- create a contact section for the website ----------------- -->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class='bx bx-mail-send'></i>fernandstevengod@gmail.com</p>
-                    <p><i class='bx bx-phone-call'></i>+639272371313/+639915990427</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/Fernandezstevengod"><i class='bx bxl-facebook'></i></a>
-                        <a href="https://www.tiktok.com/@fernandstevengod"><i class='bx bxl-tiktok'></i></a>
-                        <a href="https://github.com/fernandezsteven"><i class='bx bxl-github'></i></a>
-                        <a href="https://www.instagram.com/bhabystevengodfernandez/"><i class='bx bxl-instagram'></i></a>
-                        <a href="https://www.youtube.com/@fernandezstevengodfrey19"><i class='bx bxl-youtube'></i></a>
-                        <a href="https://www.linkedin.com/in/fernandstevengod/"><i class='bx bxl-linkedin'></i></a>
+            <div class="projects-box">
+                <div class="projects-carousel">
+                    <div class="img-slide">
+                        <div class="img-item">
+                            <img src="./Resources/Images/1.jpeg">
+                        </div>
+                        <div class="img-tem">
+                            <img src="">
+                        </div>
+                        <div class="img-tem">
+                            <img src="">
+                        </div>
                     </div>
-                    <a href="./resources/files/resume.pdf" download class="btn btn2">Download CV</a>
                 </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
+                <div class="navigation">
+                    <button class="arrow-left disabled"><i class='bx bx-chevron-left'></i></button>
+                    <button class="arrow-right"><i class='bx bx-chevron-right'></i></button>
                 </div>
             </div>
         </div>
-    </div>
-    <footer class="footer">
-        <div class="footer-copyright">
-            <p>Copyright &copy; 2025 by Steven Godfrey Fernandez | All Rights Reserved.</p>
-        </div>
+    </section>
 
-        <div class="footer-iconsTop">
-            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+    <section class="contact">
+        <div class="contact-container">
+            <div class="contact-box">
+                <h2>Let's Work <span>Together</span></h2>
+                <p class="desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dicta ipsum aspernatur explicabo accusantium, obcaecati doloribus quia neque tempore voluptate?
+                    Excepturi delectus ea autem voluptatibus magnam perferendis, molestias aliquid totam sunt!
+                </p>
+                <div class="contact-detail">
+                    <i class='bx bxs-phone'></i>
+                    <div class="detail">
+                        <p>Phone</p>
+                        <p>(+63) 927 237 1313 / (+63) 991 599 0193</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class='bx bxs-envelope'></i>
+                    <div class="detail">
+                        <p>Email</p>
+                        <p>fernandstevengod@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class='bx bxs-map'></i>
+                    <div class="detail">
+                        <p>Address</p>
+                        <p>Quibuar, Alaminos City, Pangasinan. Philippines</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-box">
+                <form action="">
+                    <h2 class="heading">Contact <span>Me!</span></h2>
+                    <div class="field-box">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="number" placeholder="Phone Number" required>
+                        <textarea name="" id="" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message <i class='bx bx-send'></i></button>
+                </form>
+            </div>
         </div>
-    </footer>
+    </section>
+    <!-- import the local js file from the resources file called scripts.js -->
+    <script src="./Resources/Controllers/Scripts.js"></script>
 </body>
-<!-- import local js file from resources file -->
-<script src="./resources/controllers/scripts.js"></script>
+
 </html>
