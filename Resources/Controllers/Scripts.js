@@ -5,14 +5,14 @@ const sections = document.querySelectorAll('section'); // Select all sections
 const activePages = () => { // Define the activePages function
     const header = document.querySelector('header'); // Select the header
     const barBox = document.querySelector('.bars-box'); // Select the bar box
-    
+
     header.classList.remove('active'); // Remove the 'active' class from the header
     setTimeout(() => { //create the timeout for the animation for the header
         header.classList.add('active'); // Add the 'active' class to the header
     }, 1100); // Set the duration of the animation of 1100ms equivalent to 1.1s
 
     navLinks.forEach(link => {
-       link.classList.remove('active'); // Remove the 'active' class from all navigation links
+        link.classList.remove('active'); // Remove the 'active' class from all navigation links
     });
     barBox.classList.remove('active'); // Remove the 'active' class from the bar box
     setTimeout(() => { //create the timeout for the animation for the bar box
@@ -25,16 +25,16 @@ const activePages = () => { // Define the activePages function
 }
 
 navLinks.forEach((link, idx) => { // Loop through each navigation link
-   link.addEventListener('click', () => { // Add a click event listener to each navigation link
-       if (!link.classList.contains('active')) { // Check if the navigation link does not have the 'active' class
-           activePages(); // Call the activePages function
-           link.classList.add('active'); // Add the 'active' class to the clicked navigation link
+    link.addEventListener('click', () => { // Add a click event listener to each navigation link
+        if (!link.classList.contains('active')) { // Check if the navigation link does not have the 'active' class
+            activePages(); // Call the activePages function
+            link.classList.add('active'); // Add the 'active' class to the clicked navigation link
 
-           setTimeout(() => { //create the timeout for the animation for the section
+            setTimeout(() => { //create the timeout for the animation for the section
                 sections[idx].classList.add('active'); // Add the 'active' class to the clicked section
-           }, 1100); // Set the duration of the animation of 1100ms equivalent to 1.1s
-       }
-   }) 
+            }, 1100); // Set the duration of the animation of 1100ms equivalent to 1.1s
+        }
+    })
 });
 
 logoLink.addEventListener('click', () => { // Add a click event listener to the logo link
@@ -106,21 +106,21 @@ arrowLeft.addEventListener('click', () => {
 });
 
 // 
-//create a function to send data to google sheet
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyRSPPVhTtsGQg1yPcirV_mC9nz7pAOXRI--LU8ZTA8aMermZxAwaZW4eW1rjlv5liq/exec'
-const form = document.forms['submit-to-google-sheet']
+// //create a function to send data to google sheet
+// const scriptURL = 'https://script.google.com/macros/s/AKfycbyRSPPVhTtsGQg1yPcirV_mC9nz7pAOXRI--LU8ZTA8aMermZxAwaZW4eW1rjlv5liq/exec'
+// const form = document.forms['submit-to-google-sheet']
 // const msg = document.getElementById("msg")
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-        // .then(response => {
-        //     msg.innerHTML = "Message sent successfully"
-        //     setTimeout(function(){
-        //         msg.innerHTML = ""
-        //     },5000)
-        //     form.reset()
-        // })
-        .catch(error => console.error('Error!', error.message))
-  })
+// form.addEventListener('submit', e => {
+//     e.preventDefault()
+//     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+//         //   .then(response => console.log('Success!', response))
+//         .then(response => {
+//             msg.innerHTML = "Message sent successfully"
+//             setTimeout(function () {
+//                 msg.innerHTML = ""
+//             }, 5000)
+//             form.reset()
+//         })
+//         .catch(error => console.error('Error!', error.message))
+// })
